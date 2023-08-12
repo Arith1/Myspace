@@ -1,10 +1,11 @@
 <template>
 
     <ContentBase>
-      <div class="card" v-for="user in users" :key="user.id" @click="open_user_profile">
+      <div class="card" v-for="user in users" :key="user.id" @click="open_user_profile(user.id)">
+        <!-- ()里为传参数 -->
         <div class="card-body">
           <div class="row">
-            <div class="col-1">
+            <div class="col-1 img-field">
               <img class="img-fluid" :src="user.photo" alt="">
               <!-- :~v-bind 绑定变量 -->
             </div>
@@ -51,12 +52,14 @@ export default {
             name : "userprofile",
             params:{
               userId: userId,
+              // 接收参数
             }
           })
         }else{
           router.push({
             name:"login"
           })
+          // 未登陆跳转到登录界面
         }
       }
 
@@ -97,5 +100,11 @@ export default {
 }
 img{
     border-radius: 50%;
+}
+.img-field{
+    /* 照片纵向剧中 */
+    display : flex;
+    flex-direction:column;
+    justify-content: center;
 }
 </style>

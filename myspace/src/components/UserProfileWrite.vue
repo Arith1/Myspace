@@ -14,22 +14,44 @@
 
 <script>
 import { ref } from 'vue';
+import $ from 'jquery';
+import { useStore } from 'vuex';
 
 export default {
     name: "UserProfileWrite",
-    setup(props,context){
+    
+    setup(props, context) {
+
+        const store = useStore();
+
         // 必须要有props否则报错,context为第二个参数
         let content = ref('');
 
         const post_a_post = () => {
+            $.ajax({
+                url: "https://app165.acapp.acwing.com.cn/myspace/post/",
+                type: "POST",
+                data: {
+                    content: content.value,
+                }, headers: {
+                    'Authorization': "Bearer " + store.state.user.access,
+                }, success(resp) {
+                    if (resp.result === "success") {
+                        context.emit('post_a_post', content.value);
+                        content.value = "";
+                    }
+                },error(){
+                    console.log("error");
+                }
+            });
+
             // console.log(content.value);
-            context.emit('post_a_post1', content.value);
-            content.value = "";
+
         }
 
-        return{
+        return {
             post_a_post,
-            content : content,
+            content: content,
             // 可以直接写成content
         }
     }
@@ -42,7 +64,8 @@ export default {
 .edit-field {
     margin-top: 20px;
 }
-button{
+
+button {
     margin-top: 10px;
 }
 </style>
