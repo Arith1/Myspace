@@ -41,11 +41,11 @@ const routes = [
     name: '404',
     component: NotFoundView
   },
-  {
-    path: '/:catchAll(.*)',
-    redirect: "/404/"
-    // 重定向
-  },
+  // {
+  //   path: '/:catchAll(.*)',
+  //   redirect: "/404/"
+  //   // 重定向
+  // },
   {
     path: '/about',
     name: 'about',

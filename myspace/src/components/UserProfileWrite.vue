@@ -19,7 +19,6 @@ import { useStore } from 'vuex';
 
 export default {
     name: "UserProfileWrite",
-    
     setup(props, context) {
 
         const store = useStore();

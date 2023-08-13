@@ -13,6 +13,9 @@
         <li class="nav-item">
           <router-link class="nav-link" :to="{name:'userlist'}">好友列表</router-link>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://chat-gpt-next-web-3-lake.vercel.app" target="_blank">ChatGpt</a>
+        </li>
         <!-- <li class="nav-item">
           <router-link class="nav-link" :to="{name:'userprofile',params:{userId: 2}}">用户动态</router-link>
         </li> -->
