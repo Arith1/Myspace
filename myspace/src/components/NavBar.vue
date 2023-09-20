@@ -14,13 +14,19 @@
           <router-link class="nav-link" :to="{name:'userlist'}">好友列表</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://miyan.zeabur.app/" target="_blank">ChatGpt</a>
+          <a class="nav-link" href="https://miyan.zeabur.app/" target="_blank">药品管理系统</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.miyan.ac.cn/" target="_blank">ChatGpt</a>
         </li>
         <!-- <li class="nav-item">
           <router-link class="nav-link" :to="{name:'userprofile',params:{userId: 2}}">用户动态</router-link>
         </li> -->
         
       </ul>
+
+      
+
       <ul class="navbar-nav" v-if="!$store.state.user.is_login">
             <!-- name为index.js中声明的名字，params为接收参数必须 -->
         <li class="nav-item">
