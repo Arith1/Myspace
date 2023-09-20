@@ -5,7 +5,7 @@ import NotFoundView from '../views/NotFoundView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import UserList from '../views/UserList.vue'
 import UserProfile from '../views/UserProfile.vue'
-
+import ExtraView from '../views/ExtraView.vue'
 
 
 const routes = [
@@ -31,11 +31,17 @@ const routes = [
     component: UserList
   },
   {
+    path: '/extra/',
+    name: 'extra',
+    component: ExtraView
+  },
+  {
     path: '/userprofile/:userId/',
     // 冒号为参数
     name: 'userprofile',
     component: UserProfile
   },
+  
   {
     path: '/404/',
     name: '404',
