@@ -33,7 +33,7 @@
             <div class="card-body">
               <h5 class="card-title">SuperCook</h5>
               <p class="card-text">SuperCook是一款免费在线食谱生成器/食谱搜索引擎，可让你根据家里现有的食材进行搜索，输入食材自动出菜谱，帮助用户找到数以千计的食谱，充分利用家里的食材，非常方便快捷的在线食谱生成器和食谱搜索引擎，而且支持全球多种语言，使用无需注册登录，还支持手机端app</p>
-              <a href="https://www.miyan.ac.cn/" target="_blank" class="btn btn-primary">打开</a>
+              <a href="https://www.supercook.com/#/desktop" target="_blank" class="btn btn-primary">打开</a>
             </div>
           </div>
         </div>
